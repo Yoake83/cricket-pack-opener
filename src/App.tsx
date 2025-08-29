@@ -151,12 +151,12 @@ function useSFX(muted: boolean) {
 function TierBadge({ tier }: { tier: Tier }) {
   return <span style={{ padding: "2px 6px", borderRadius:"8px", border:"1px solid white", fontSize:"12px" }}>{tier}</span>;
 }
-const TIER_GLOWS: Record<string, string> = {
+/*const TIER_GLOWS: Record<string, string> = {
   Common: "shadow-[0_0_20px_rgba(192,192,192,0.3)]",          // Silver glow
   Rare: "shadow-[0_0_50px_rgba(30,58,138,0.6)]",              // Dark blue glow
   Epic: "shadow-[0_0_60px_rgba(255,215,0,0.55)]",             // Gold glow
   Legend: "shadow-[0_0_100px_rgba(255,140,0,0.85)]",          // Orange glow
-};
+};**/
 
 function Avatar({ name }: { name: string }) {
   const initials = useMemo(()=>name.split(/\s|\./).filter(Boolean).map(s=>s[0]).slice(0,2).join("").toUpperCase(), [name]);
