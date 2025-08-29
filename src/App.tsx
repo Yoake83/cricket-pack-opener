@@ -245,7 +245,7 @@ function Main(){
   const [opening, setOpening] = useState(false);
   const [packResult,setPackResult] = useState<PackResult|null>(null);
   const [showCollection,setShowCollection] = useState(false);
-  const [triggerConfetti,setTriggerConfetti] = useState(false);
+//  const [triggerConfetti,setTriggerConfetti] = useState(false);
   const [showSummary,setShowSummary] = useState(false);
 
   const [collectionFilter,setCollectionFilter] = useState<{tier?:Tier; role?:typeof ROLES[number]}>({});
@@ -275,7 +275,7 @@ function Main(){
     setPackResult({ items: resultItems, anyEpicOrLegend, coinsDelta });
     setTimeout(()=>{
       dispatch({ type:"APPLY_PACK_RESULT", payload:{ items: resultItems, anyEpicOrLegend, coinsDelta } });
-      if(anyEpicOrLegend) setTriggerConfetti(true);
+     // if(anyEpicOrLegend) setTriggerConfetti(true);
       setOpening(false);
       setShowSummary(true);
     },1500);
@@ -297,6 +297,8 @@ function Main(){
   alignItems: "center",
   padding: 16
 }}>
+    
+  
   <h1 style={{ fontSize: 32, fontWeight: "bold", marginBottom: 16 }}>Cricket Pack Opener</h1>
 
   <div style={{ display: "flex", gap: 8, marginBottom: 16 }}>
